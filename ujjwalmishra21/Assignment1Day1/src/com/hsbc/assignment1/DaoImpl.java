@@ -1,6 +1,6 @@
 package com.hsbc.assignment1;
 
-import java.time.LocalDate;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -8,9 +8,7 @@ import java.util.List;
 public class DaoImpl {
 	private List<Employee> employees = new ArrayList<>();
 	
-	public void store(String name, LocalDate date, double salary) {
-		
-		Employee employee = new Employee(employees.size()+1,name,salary,date);
+	public void store(Employee employee) {
 		employees.add(employee);
 	}
 	

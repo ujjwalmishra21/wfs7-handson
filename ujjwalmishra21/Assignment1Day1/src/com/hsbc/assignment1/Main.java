@@ -10,12 +10,15 @@ public class Main {
 	public static void main(String args[]) {
 		
 		DaoImpl dao = new DaoImpl();
-	
-		dao.store("Ujjwal", LocalDate.of(1997, 02, 21), 780000);
-		dao.store("Abhishek", LocalDate.of(1998, 11, 02), 560000);
-		dao.store("Binu", LocalDate.of(1997, 02, 25), 9000000);
-		dao.store("Manish", LocalDate.of(1998, 07, 22), 800000);
-		
+		Employee e1 = new Employee("Ujjwal", LocalDate.of(1997, 02, 21), 780000);
+		Employee e2 = new Employee("Abhishek", LocalDate.of(1998, 11, 02), 560000);
+		Employee e3 = new Employee("Binu", LocalDate.of(1997, 02, 25), 9000000);
+		Employee e4 = new Employee("Manish", LocalDate.of(1998, 07, 22), 800000);
+		dao.store(e1);
+		dao.store(e2);
+		dao.store(e3);
+		dao.store(e4);
+				
 		boolean exit = false;
 		while(!exit) {
 			System.out.println("1. Store");
@@ -35,7 +38,8 @@ public class Main {
 				String date = sc.next();
 				LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 				
-				dao.store(name, localDate, salary);			
+				Employee eNew = new Employee(name, localDate, salary);
+				dao.store(eNew);			
 				
 				break;
 			case 2:

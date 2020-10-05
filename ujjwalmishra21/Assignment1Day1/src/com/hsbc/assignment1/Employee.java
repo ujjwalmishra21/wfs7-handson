@@ -7,14 +7,22 @@ public class Employee {
 	private String name;
 	private double salary;
 	private LocalDate dob;
+	private static int count = 0;
 	
-	public Employee(int id, String name, double salary, LocalDate dob) {
+	public Employee(String name, LocalDate dob, double salary) {
 		super();
-		this.id = id;
+		this.id = ++count;
 		this.name = name;
 		this.salary = salary;
 		this.dob = dob;
 	}
+//	public Employee(int id, String name, double salary, LocalDate dob) {
+//		super();
+//		this.id = id;
+//		this.name = name;
+//		this.salary = salary;
+//		this.dob = dob;
+//	}
 	public int getId() {
 		return id;
 	}
