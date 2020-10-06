@@ -6,8 +6,8 @@ import java.util.Scanner;
 import com.hsbc.exceptions.InsuffientBalanceException;
 import com.hsbc.exceptions.InvalidAccountException;
 import com.hsbc.model.beans.Account;
+import com.hsbc.model.service.AccountService;
 import com.hsbc.model.utils.ObjectFactory;
-import com.hsbc.service.AccountService;
 
 public class MainViewController {
 	public static void main(String args[]) {

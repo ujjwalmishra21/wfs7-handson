@@ -1,8 +1,8 @@
 package com.hsbc.model.utils;
 
-import com.hsbc.dao.AccountDao;
-import com.hsbc.dao.AccountDaoImp;
-import com.hsbc.service.AccountServiceImpl;
+import com.hsbc.model.dao.AccountDao;
+import com.hsbc.model.dao.AccountDaoImp;
+import com.hsbc.model.service.AccountServiceImpl;
 
 public class ObjectFactory {
 	
