@@ -8,6 +8,10 @@ import com.hsbc.models.DBUtility;
 public class JdbcBackedDao implements AccountDAO {
 	
 	private DBUtility dbUtility;
+	
+	public JdbcBackedDao(DBUtility dbUtility) {
+		this.dbUtility = dbUtility;
+	}
 		
 	public void setDbUtility(DBUtility dbUtility) {
 		this.dbUtility = dbUtility;

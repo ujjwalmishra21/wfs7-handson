@@ -14,10 +14,12 @@
 		<property name="password" value="admin"></property> -->
 	</bean>
 	<bean id="jdbcDao" class="com.hsbc.dao.JdbcBackedDao">
-		<property name="dbUtility" ref="db"></property>
+		<!-- <property name="dbUtility" ref="db"></property> -->
+		<constructor-arg index="0" ref="db"></constructor-arg>
 	</bean>
-		<bean id="hibernateDao" class="com.hsbc.dao.HibernateDao">
-		<property name="dbUtility" ref="db"></property>
+	<bean id="hibernateDao" class="com.hsbc.dao.HibernateDao">
+		<!-- <property name="dbUtility" ref="db"></property> -->
+		<constructor-arg index="0" ref="db"></constructor-arg>
 	</bean>
 	<bean id="accountService" class="com.hsbc.service.AccountServiceImpl">
 		<property name="jdbc" ref="hibernateDao"></property>
