@@ -9,4 +9,5 @@ public interface UserService {
 	public List<User> fetchUsers();
 	public void deleteByUserId(int id);
 	public User fetchUserById(int id);
+	public User updateUser(User user);
 }

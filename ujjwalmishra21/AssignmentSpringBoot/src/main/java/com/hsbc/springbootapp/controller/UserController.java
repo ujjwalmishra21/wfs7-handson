@@ -23,6 +23,12 @@ public class UserController {
 		return userService.createUser(user);
 
 	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public User updateUser(@RequestBody User user) {
+		return userService.updateUser(user);
+
+	}
 
 	@RequestMapping(value = "/users", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<User> getAllUsers() {
