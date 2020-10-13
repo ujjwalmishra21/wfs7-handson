@@ -41,14 +41,12 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User updateUser(User user) {
+	public User updateSalary(User user) {
 		// TODO Auto-generated method stub
 		Optional<User> optional = userDao.findById(user.getUserId());
 		if(optional.isPresent()) {
 			User us = optional.get();
-			us.setUserId(user.getUserId());
 			us.setSalary(user.getSalary());
-			us.setUsername(user.getUsername());
 			return userDao.save(us);
 			
 		}

@@ -25,8 +25,8 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/update", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public User updateUser(@RequestBody User user) {
-		return userService.updateUser(user);
+	public User updateSalary(@RequestBody User user) {
+		return userService.updateSalary(user);
 
 	}
 
