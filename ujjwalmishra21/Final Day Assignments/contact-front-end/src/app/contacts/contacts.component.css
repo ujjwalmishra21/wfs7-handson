@@ -1,0 +1,26 @@
+.delete-contact{
+    cursor: pointer;
+}
+.edit-contact{
+    cursor: pointer;
+    margin-right: 30px;
+}
+.add-contact{
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.edit-form-div{
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.edit-form-close{
+    float: inline-end;
+    cursor: pointer;
+}
+.button-general{
+    margin-top: 10px;
+}

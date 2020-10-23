@@ -1,0 +1,24 @@
+<div class="container">
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">PhoneBook</a>
+    </nav>
+</div>
+<div class="contents-section container-fluid">
+        <div>
+            <h3>Register</h3>
+        </div>
+    
+        <div class="row">
+            <form #signUpForm="ngForm" (ngSubmit)="handleRegister(signUpForm.value)">
+                <input type="text" [(ngModel)]="name" name="name" autocomplete="off" class="form-control" placeholder="Enter your name"><br>
+                <input type="password" [(ngModel)]="password" name="password" autocomplete="off" class="form-control" placeholder="Enter password"><br>
+                <input type="text" [(ngModel)]="phone" name="phone" autocomplete="off" class="form-control" placeholder="Enter phone number"><br>
+                <input type="date" [(ngModel)]="dob" name="dob" autocomplete="off" class="form-control"><br>
+                <input type="submit" class="btn btn-primary" value="Register">
+            </form>
+        </div>
+        <div class="row login-link-bottom">
+            <a routerLink="/">Click here</a>&nbsp; to login
+        </div>
+    
+</div>

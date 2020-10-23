@@ -1,0 +1,23 @@
+<div class="container">
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">PhoneBook</a>
+    </nav>
+</div>
+<div class="contents-section container-fluid">
+    <div>
+        <h3>Login</h3>
+    </div>
+
+        <div class="row">
+            <form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm.value)">
+                <input type="number" [(ngModel)]="id" name="id" autocomplete="off" class="form-control" placeholder="Enter user id"><br>
+                <input type="password" [(ngModel)]="password" name="password" autocomplete="off" class="form-control" placeholder="Enter password"><br>
+                <input type="submit" class="btn btn-success" value="Login">
+            </form>
+           
+        </div>
+        <div class="row register-link-bottom">
+            <a routerLink="/register">Click here</a>&nbsp; to register
+        </div>
+ 
+</div>

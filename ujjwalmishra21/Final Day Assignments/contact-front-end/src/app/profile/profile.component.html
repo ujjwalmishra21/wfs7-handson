@@ -1,0 +1,30 @@
+
+<div class="container-fluid">
+    <div class="alert alert-success">
+        <h4 class="alert-heading">Welcome {{name}}!</h4>
+    </div>
+    
+    <div class="row">
+        <form class="form">
+            <div class="form-group row">
+                <label for="id" class="col-4">ID&nbsp;</label>
+                <input type="number" [(ngModel)]="id" name="id" class="form-control col-7" disabled>
+            </div>
+            <div class="form-group row">
+                <label for="name" class="col-4">Name&nbsp;</label>
+                <input type="text" [(ngModel)]="name" name="name" class="form-control col-7" disabled>
+            </div>
+            <div class="form-group row">
+                <label for="dob" class="col-4">Birth Date&nbsp;</label>
+                <input type="date" [(ngModel)]="dob" name="dob" class="form-control col-7" [disabled]="!edit">
+            </div>
+            <div class="form-group row">
+                <label for="phone" class="col-4">Phone&nbsp;</label>
+                <input type="number" [(ngModel)]="phone" name="phone" class="form-control col-7" [disabled]="!edit">
+            </div>
+           <button style="margin-right: 10px;" class="btn btn-success" (click)="editSubmit()" [disabled]="!edit">Submit</button>
+           <button class="btn btn-primary" (click)="editOption()">Edit</button>
+        </form>
+
+    </div>
+</div>  

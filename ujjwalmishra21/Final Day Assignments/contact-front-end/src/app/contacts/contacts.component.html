@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row add-contact">
+        <div class="form-group">
+            <h4>Add Contact</h4>
+            <form #addContactForm="ngForm" (ngSubmit)="addContacts(addContactForm.value)">
+                <input type="name" [(ngModel)]="name" name="name" class="form-control" placeholder="Enter contact's name" required><br>
+                <input type="number" [(ngModel)]="phone" name="phone" class="form-control" placeholder="Enter contact's phone" required><br>
+                <input type="submit" class="btn btn-primary" value="Add Contact">
+            </form>
+        </div>
+    </div>
+    <div class="row">
+      
+        <div class="edit-form-div" [hidden]="!edit">
+            <h5>Edit Contact<span class="edit-form-close" (click)="closeEditForm()">x</span></h5>
+            <form #editForm="ngForm" (ngSubmit)="submitEditContact(editForm.value)">
+              <div class="form-row">
+                <div class="col">
+                    <label>Name</label>
+                    <input type="text" [(ngModel)]="editName" name="editName" class="form-control" autocomplete="off">
+                </div>
+                
+                <div class="col">
+                    <label>Phone</label>
+                    <input type="number" [(ngModel)]="editPhone" name="editPhone" class="form-control" autocomplete="off">
+                </div>
+              </div>
+              <input type="submit" class="button-general btn btn-success" value="Submit">
+              
+            </form>
+            
+        </div>
+        <table class="table">
+            <thead>
+                <th scope="col">Contact ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let contact of response">
+                    <td>{{contact.id}}</td>
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.phone}}</td>
+                    <td><span class="edit-contact btn btn-dark" (click)="editContact(contact)">-</span><span (click)="deleteContact(contact.id)" class="delete-contact btn btn-danger">x</span></td>
+                </tr>
+            </tbody>
+        </table>
+    
+    </div>
+ 
+</div>  
